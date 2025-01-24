@@ -1,0 +1,26 @@
+server:
+  name: "EMS MCP Server"
+
+directories:
+  sources:
+    - "resources/sources"
+    # Add additional source directories here
+  
+  implementations:
+    - "tools/implementations"
+    # Add additional implementation directories here
+  
+  templates:
+    - "prompts/templates"
+    # Add additional template directories here
+
+logging:
+  version: 1
+  disable_existing_loggers: false
+  handlers:
+    console:
+      class: "logging.StreamHandler"
+      level: "INFO"
+  root:
+    level: "INFO"
+    handlers: ["console"]
